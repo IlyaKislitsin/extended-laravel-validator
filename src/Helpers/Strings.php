@@ -1,0 +1,54 @@
+<?php
+declare(strict_types=1);
+
+namespace AvtoDev\ExtendedLaravelValidator\Helpers;
+
+class Strings
+{
+    /**
+     * @param string $value
+     * @return bool
+     */
+    public static function hasAtLeastOneNotZeroDigit(string $value): bool
+    {
+        return preg_match('/[1-9]/', $value) === 1;
+    }
+
+    /**
+     * @param string $upper_value
+     * @return bool
+     */
+    public static function hasAtLeastOneLatinLetter(string $upper_value): bool
+    {
+        return preg_match('/[A-Z]/', $upper_value) === 1;
+    }
+
+    /**
+     * Определяет наличие в строке хотя бы одной латинской буквы.
+     *
+     * @param string $upper_value
+     * @return bool
+     */
+    public static function hasAtLeastOneCyrLetter(string $upper_value): bool
+    {
+        return preg_match('/[А-ЯЁ]/u', $upper_value) === 1;
+    }
+
+    /**
+     * @param string $value
+     * @return bool
+     */
+    public static function onlyUppercaseLetters(string $value): bool
+    {
+        return \preg_match('/[a-zа-яё]/u', $value) === 0;
+    }
+
+    /**
+     * @param string $upper_value
+     * @return bool
+     */
+    public static function onlyLettersAndDigits(string $upper_value): bool
+    {
+        return \preg_match('/^[A-ZА-ЯЁ0-9]+$/u', $upper_value) === 1;
+    }
+}
