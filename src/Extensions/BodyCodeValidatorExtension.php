@@ -8,7 +8,7 @@ use AvtoDev\ExtendedLaravelValidator\Helpers\Strings;
 use AvtoDev\ExtendedLaravelValidator\AbstractValidatorExtension;
 
 /**
- * Правило валидации номера кузова транспортного средства.
+ * Правило валидации Номера Кузова (Body) транспортного средства.
  *
  * 1. Длина от 7 до 15 символов
  * 2. Верхний регистр
@@ -52,7 +52,7 @@ class BodyCodeValidatorExtension extends AbstractValidatorExtension
     }
 
     /**
-     * Определяет содержание в строке символов из латинского и кириллического алфавитов.
+     * Определяет содержание в строке символов из латинского и кириллического Алфавитов.
      *
      * @param string $value
      * @return bool

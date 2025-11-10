@@ -7,6 +7,8 @@ namespace AvtoDev\ExtendedLaravelValidator\Tests;
 use AvtoDev\ExtendedLaravelValidator\Extensions\BodyCodeValidatorExtension;
 
 /**
+ * Класс для измерения скорости выполнения кода.
+ *
  * @coversNothing
  */
 class SpeedTest extends AbstractUnitTestCase

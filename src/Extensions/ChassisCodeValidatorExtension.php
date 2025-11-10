@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace AvtoDev\ExtendedLaravelValidator\Extensions;
 
 /**
- * Правило валидации номера шасси транспортного средства.
+ * Правило валидации номера Шасси (Chassis) транспортного средства.
  */
 class ChassisCodeValidatorExtension extends BodyCodeValidatorExtension
 {
