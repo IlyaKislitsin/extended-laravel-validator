@@ -48,7 +48,6 @@ class BodyCodeValidatorExtensionTest extends AbstractExtensionTestCase
             '068',
             '06',
             '0',
-
             // Содержащие пробелы там, где не надо
             ' SF5091230',
             'BJ5W117467 ',
@@ -57,10 +56,8 @@ class BodyCodeValidatorExtensionTest extends AbstractExtensionTestCase
             ' NZE1243011784  ',
             'SV43  - 0008767',
             '  А123ВС45  ',
-
             // Содержащие строчные буквы
             'A123bC45',
-
             // Содержащие запрещенные символы
             'GA31035%90',
             'Z26A5#01387',
@@ -91,6 +88,27 @@ class BodyCodeValidatorExtensionTest extends AbstractExtensionTestCase
             // Смешанный алфавит
             'А123BC45',
             'A123ВС45',
+            'NZE141-9134919',
+            'GX115-0001807',
+            'FN15-002153',
+            'EXZ10-0040809',
+            'AT190-4018171',
+            'JZX90-0025950',
+            'SV43-0008767',
+            'ZNE10-0237030',
+            'CE105-0005302',
+            'P25W-0506755',
+            'ZCT10-0020100',
+            'GRX130-6026674',
+            'JZX90-6562365',
+            'KAБ 1601036',
+            'ZNE10-0195718',
+            'KAБИHA2253831',
+            'HEYCTAH0BЛEH0',
+            'ФYPГ0H597108',
+            'KAБИHA30093',
+            'CK0HИK0M',
+            '2197777KAБИHA',
         ];
     }
 
@@ -100,6 +118,13 @@ class BodyCodeValidatorExtensionTest extends AbstractExtensionTestCase
     protected function getValidValues(): array
     {
         return [
+            '0000036',
+            '0000460',
+            '2019073',
+            'U053459',
+            'W078654',
+            'ME89732',
+            'B930128',
             'А123ВС45',
             'A123BC45',
             'А100000',
@@ -157,7 +182,6 @@ class BodyCodeValidatorExtensionTest extends AbstractExtensionTestCase
             'ZZT2410007004',
             'SRF9W401273',
             'ST1830020258',
-            'JZX906500314',
             'JZX906500314',
             'ZZT2410023674',
             'LS1510002351',
