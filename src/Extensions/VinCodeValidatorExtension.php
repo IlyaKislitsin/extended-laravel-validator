@@ -45,7 +45,7 @@ class VinCodeValidatorExtension extends AbstractValidatorExtension
     }
 
     /**
-     * Определяет соответствие общему формату Vin транспортного средства.
+     * Определяет соответствие общему формату VIN транспортного средства.
      *
      * @param string $value
      * @return bool

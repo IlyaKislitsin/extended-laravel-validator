@@ -38,7 +38,7 @@ class StringsTest extends AbstractUnitTestCase
     /**
      * @return void
      */
-    public function testHasOnlyUpperLatinAlfa(): void
+    public function testHasAtLeastOneLatinLetter(): void
     {
         $cases = [
             'BAR0' => true,
@@ -96,7 +96,7 @@ class StringsTest extends AbstractUnitTestCase
     /**
      * @return void
      */
-    public function testOnlyUppercaseLetters(): void
+    public function testHasOnlyUppercaseLetters(): void
     {
         $cases = [
             '2 ' => true,
