@@ -36,6 +36,10 @@ class BodyCodeValidatorExtension extends AbstractValidatorExtension
      */
     public function passes(string $attribute, $value): bool
     {
+        if (!\is_string($value)) {
+            return false;
+        }
+
         $length = \mb_strlen($value, 'UTF-8');
 
         if ($length >= self::LENGTH_MIN && $length <= self::LENGTH_MAX &&

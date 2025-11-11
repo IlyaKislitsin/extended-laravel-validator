@@ -8,7 +8,8 @@ The format is based on [Keep a Changelog][keepachangelog] and this project adher
 
 ### Changed
 
-- Validators of `vin_code`, `body_code` and `chassis_code`
+- Rules of `vin_code`, `body_code` and `chassis_code` validators
+- In `vin_code`, `body_code` and `chassis_code` validators added type validation
 
 ## v5.0.0
 

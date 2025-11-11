@@ -14,6 +14,25 @@ use AvtoDev\ExtendedLaravelValidator\Extensions\ChassisCodeValidatorExtension;
 class ChassisCodeValidatorExtensionTest extends BodyCodeValidatorExtensionTest
 {
     /**
+     * @return void
+     */
+    public function testInvalidValueType(): void
+    {
+        $cases = [
+            new \stdClass(),
+            false,
+            1.222,
+            []
+        ];
+
+        $instance = new ChassisCodeValidatorExtension;
+
+        foreach ($cases as $case) {
+            $this->assertFalse($instance->passes('foo', $case));
+        }
+    }
+
+    /**
      * {@inheritdoc}
      */
     protected function getExtensionClassName(): string
