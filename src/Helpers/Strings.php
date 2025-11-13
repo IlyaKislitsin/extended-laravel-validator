@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace AvtoDev\ExtendedLaravelValidator\Helpers;
 
+/**
+ * @internal
+ */
 class Strings
 {
     /**
