@@ -34,18 +34,10 @@ class VinCodeValidatorExtension extends AbstractValidatorExtension
      */
     public function passes(string $attribute, $value): bool
     {
-        if (!\is_string($value)) {
-            return false;
-        }
-
-        if ($this->hasVinCodeFormat($value) &&
-            Strings::hasAtLeastOneLatinLetter($value) &&
-            Strings::hasAtLeastOneNotZeroDigit($value)
-        ) {
-            return true;
-        }
-
-        return false;
+        return \is_string($value)
+            && $this->hasVinCodeFormat($value)
+            && Strings::hasAtLeastOneLatinLetter($value)
+            && Strings::hasAtLeastOneNotZeroDigit($value);
     }
 
     /**

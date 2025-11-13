@@ -42,16 +42,11 @@ class BodyCodeValidatorExtension extends AbstractValidatorExtension
 
         $length = \mb_strlen($value, 'UTF-8');
 
-        if ($length >= self::LENGTH_MIN && $length <= self::LENGTH_MAX &&
-            Strings::hasOnlyUppercaseLetters($value) &&
-            Strings::hasOnlyLettersAndDigits($value) &&
-            Strings::hasAtLeastOneNotZeroDigit($value) &&
-            !$this->hasBothAlphabets($value)
-        ) {
-            return true;
-        }
-
-        return false;
+        return $length >= self::LENGTH_MIN && $length <= self::LENGTH_MAX
+            && Strings::hasOnlyUppercaseLetters($value)
+            && Strings::hasOnlyLettersAndDigits($value)
+            && Strings::hasAtLeastOneNotZeroDigit($value)
+            && !$this->hasBothAlphabets($value);
     }
 
     /**
