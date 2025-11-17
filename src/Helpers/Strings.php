@@ -18,21 +18,21 @@ class Strings
     }
 
     /**
-     * @param string $upper_value Строка в верхнем регистре.
+     * @param string $value
      * @return bool
      */
-    public static function hasAtLeastOneLatinLetter(string $upper_value): bool
+    public static function hasAtLeastOneLatinUpperLetter(string $value): bool
     {
-        return \preg_match('/[A-Z]/', $upper_value) === 1;
+        return \preg_match('/[A-Z]/', $value) === 1;
     }
 
     /**
-     * @param string $upper_value Строка в верхнем регистре.
+     * @param string $value
      * @return bool
      */
-    public static function hasAtLeastOneCyrLetter(string $upper_value): bool
+    public static function hasAtLeastOneCyrUpperLetter(string $value): bool
     {
-        return \preg_match('/[А-ЯЁ]/u', $upper_value) === 1;
+        return \preg_match('/[А-ЯЁ]/u', $value) === 1;
     }
 
     /**
@@ -45,11 +45,11 @@ class Strings
     }
 
     /**
-     * @param string $upper_value Строка в верхнем регистре.
+     * @param string $value
      * @return bool
      */
-    public static function hasOnlyLettersAndDigits(string $upper_value): bool
+    public static function hasOnlyUpperLettersAndDigits(string $value): bool
     {
-        return \preg_match('/^[A-ZА-ЯЁ0-9]+$/u', $upper_value) === 1;
+        return \preg_match('/^[A-ZА-ЯЁ0-9]+$/u', $value) === 1;
     }
 }

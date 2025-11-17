@@ -38,7 +38,7 @@ class StringsTest extends AbstractUnitTestCase
     /**
      * @return void
      */
-    public function testHasAtLeastOneLatinLetter(): void
+    public function testHasAtLeastOneLatinUpperLetter(): void
     {
         $cases = [
             'BAR0' => true,
@@ -57,7 +57,7 @@ class StringsTest extends AbstractUnitTestCase
 
         foreach ($cases as $value => $expected) {
             $this->assertSame(
-                $expected, Strings::hasAtLeastOneLatinLetter($value),
+                $expected, Strings::hasAtLeastOneLatinUpperLetter($value),
                 'Case "' . $value . '" failed'
             );
         }
@@ -66,7 +66,7 @@ class StringsTest extends AbstractUnitTestCase
     /**
      * @return void
      */
-    public function testHasAtLeastOneCyrLetter(): void
+    public function testHasAtLeastOneCyrUpperLetter(): void
     {
         $cases = [
             '2 ' => false,
@@ -87,7 +87,7 @@ class StringsTest extends AbstractUnitTestCase
 
         foreach ($cases as $value => $expected) {
             $this->assertSame(
-                $expected, Strings::hasAtLeastOneCyrLetter($value),
+                $expected, Strings::hasAtLeastOneCyrUpperLetter($value),
                 'Case "' . $value . '" failed'
             );
         }
@@ -126,7 +126,7 @@ class StringsTest extends AbstractUnitTestCase
     /**
      * @return void
      */
-    public function testHasOnlyLettersAndDigits(): void
+    public function testHasOnlyUpperLettersAndDigits(): void
     {
         $cases = [
             '2 ' => false,
@@ -146,7 +146,7 @@ class StringsTest extends AbstractUnitTestCase
 
         foreach ($cases as $value => $expected) {
             $this->assertSame(
-                $expected, Strings::hasOnlyLettersAndDigits($value),
+                $expected, Strings::hasOnlyUpperLettersAndDigits($value),
                 'Case "' . $value . '" failed'
             );
         }

@@ -44,7 +44,7 @@ class BodyCodeValidatorExtension extends AbstractValidatorExtension
 
         return $length >= self::LENGTH_MIN && $length <= self::LENGTH_MAX
             && Strings::hasOnlyUppercaseLetters($value)
-            && Strings::hasOnlyLettersAndDigits($value)
+            && Strings::hasOnlyUpperLettersAndDigits($value)
             && Strings::hasAtLeastOneNotZeroDigit($value)
             && !$this->hasBothAlphabets($value);
     }
@@ -57,6 +57,6 @@ class BodyCodeValidatorExtension extends AbstractValidatorExtension
      */
     private function hasBothAlphabets(string $value): bool
     {
-        return Strings::hasAtLeastOneLatinLetter($value) && Strings::hasAtLeastOneCyrLetter($value);
+        return Strings::hasAtLeastOneLatinUpperLetter($value) && Strings::hasAtLeastOneCyrUpperLetter($value);
     }
 }

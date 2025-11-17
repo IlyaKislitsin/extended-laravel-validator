@@ -36,7 +36,7 @@ class VinCodeValidatorExtension extends AbstractValidatorExtension
     {
         return \is_string($value)
             && $this->hasVinCodeFormat($value)
-            && Strings::hasAtLeastOneLatinLetter($value)
+            && Strings::hasAtLeastOneLatinUpperLetter($value)
             && Strings::hasAtLeastOneNotZeroDigit($value);
     }
 
